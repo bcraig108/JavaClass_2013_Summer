@@ -25,7 +25,7 @@ public class Conditionals {
             System.out.println( "Let\'s play Minecraft!" );
             System.out.println();
         }
-/*
+        
         // Run this program: Does the line above print?  Why or why not?
         // Change the play variable to true and run it again: Does it print?
 
@@ -126,16 +126,13 @@ public class Conditionals {
         int tool = STONE_PICKAXE;
         int block = IRON_BLOCK;
         
+        System.out.print( "I " );
         if ( tool >= block )
-        {
-            System.out.println( "I can mine that!" );
-            System.out.println();                        
-        }
+            System.out.print( "can" );
         else
-        {
-            System.out.println( "I can\'t mine that!" );
-            System.out.println();                        
-        }
+            System.out.print( "can\'t" );
+        System.out.println( " mine that!" );
+        System.out.println();                        
         
         // Run this program: Which line of the 2 above prints?  Why?
         // What if you change the block to GOLD_BLOCK? What if you change tool
@@ -146,6 +143,7 @@ public class Conditionals {
         System.out.print( "I " );
         System.out.print( ( tool >= block ) ? "can" : "can\'t" );
         System.out.println( " mine that!" );
+        System.out.println();                        
 
         // Run this program: What do the 3 lines above print?  Why?
         // What if you change the block to GOLD_BLOCK? What if you change tool
@@ -212,7 +210,7 @@ public class Conditionals {
             System.out.println( "You are playing in an unknown mode" );
             System.out.println();
         }
-*/        
+        
         // Run this program: Which line of the above prints?  Why?
         // What if you change the block to GOLD_BLOCK? DIAMOND_BLOCK? -1?
         // =====================================================================
