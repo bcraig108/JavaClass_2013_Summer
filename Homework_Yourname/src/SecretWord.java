@@ -12,40 +12,83 @@ import java.util.Scanner;
  */
 public class SecretWord 
 {
+    // the secret words - attibute
+    String [] secret = { "boat", "canoe", "airplane" };
+
+    // the index of the secret word - attribute
+    int index;
+    
+    /**
+     * the constructor picks the secret word index
+     */
+    SecretWord()
+    {
+        // select which word
+        index = (int)Math.round( Math.random() * ( secret.length - 1 ) );
+    }
+    
+    /**
+     * This method allows the user to guess the answer
+     * @param answer the user's guess
+     * @return true if correct, false if not
+     */
+    boolean guess( String answer )
+    {
+        // if the secret word matches
+        if ( secret[index].equals( answer.toLowerCase() ) )
+        {
+            System.out.println("You guessed the secret word!");
+            return true;
+        }
+        else    // the secret word does not match
+        {
+            System.out.println( "Sorry, try again!" );
+            System.out.print( "Hint: " );
+            hint();
+
+            return false;
+
+        }   // end if the secret word matches
+    }
+    
+    /**
+     * This function gives the user a hint
+     */
+    void hint()
+    {
+        System.out.println( "The word is " + 
+                            secret[index].length() + 
+                            " characters long" );
+//        System.out.println( "The word starts with \"" + 
+//                            secret[index].toCharArray()[0] + "\"" );
+//        System.out.println( "The word ends with \"" + 
+//                            secret[index].toCharArray()[secret[index].length() - 1] + "\"" );
+    }
+    
+    /**
+     * The main program
+     * @param args 
+     */
     public static void main( String[] args )
     {
-        // the secret words
-        String [] secret = { "boat", "canoe", "airplane" };
-        
-        // select which word
-        int index = (int)Math.round( Math.random() * ( secret.length - 1 ) );
-
         // the input scanner
         Scanner readUserInput = new Scanner( System.in );  
 
-        // init success to false
-        boolean success = false;
+        // create the SecretWord object
+        SecretWord secret = new SecretWord();
         
-        // loop until true
-        while ( success == false )
+        boolean success;
+        
+        do
         {
             System.out.print( "Enter your guess: " );  
 
             // wait and READ TEXT INPUT from user after user hit 'Enter'  
-            String guess = readUserInput.nextLine();  
+            String input = readUserInput.nextLine();  
 
-            // if the secret word matches
-            if ( secret[index].equals( guess.toLowerCase() ) )
-            {
-                System.out.println("You guessed the secret word!");
-                success = true;
-            }
-            else    // the secret word does not match
-            {
-                System.out.println( "Sorry, try again!" );
-            
-            }   // end if the secret word matches
-            
-        }   // end loop until true
+            // guess check the answer
+            success = secret.guess( input );
+        }
+        while ( success == false );
     }
 }
