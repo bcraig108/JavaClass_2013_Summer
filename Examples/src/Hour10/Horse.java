@@ -17,7 +17,7 @@ public class Horse {
     int runCount;
     
     /**
-     * the horse remembers how my time it jumped - this is an attribute
+     * the horse remembers how many times it jumped - this is an attribute
      */
     int jumpCount;
     
