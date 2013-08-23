@@ -37,29 +37,29 @@ public class ComponentDemo extends JFrame {
         // set the layout to "Flow" so that component drop in where they fit best
         FlowLayout flo = new FlowLayout();
         setLayout( flo );
-/*        
+        
         // ====================================================================
         // Buttons
         
         // create and add a play button
         JButton play = new JButton( "Play" );
         add( play );
-/*        
+
         // create and add a stop button
         JButton stop = new JButton( "Stop" );
         add( stop );
-/*        
+        
         // create and add a pause button
         JButton pause = new JButton( "Pause" );
         add( pause );
-/*        
+        
         // ====================================================================
         // Labels
         
         // create and add a label
         JLabel label = new JLabel( "Name:" );
         add( label );
-/*        
+
         // ====================================================================
         // Text Fields
         
@@ -67,22 +67,22 @@ public class ComponentDemo extends JFrame {
         JTextField field = new JTextField( 15 );
         add( field );
         field.setText( "Brian" );
-/*        
+
         // ====================================================================
         // Check Boxes
 
         // create and add "Large" checkbox
         JCheckBox large = new JCheckBox( "Large" );
         add( large );
- /*       
+       
         // create and add "Medium" checkbox
         JCheckBox medium = new JCheckBox( "Medium", true );
         add( medium );
- /*       
+       
         // create and add "Small" checkbox
         JCheckBox small = new JCheckBox( "Small" );
         add( small );
- /*       
+       
         // ====================================================================
         // Button Groups
 
@@ -92,7 +92,7 @@ public class ComponentDemo extends JFrame {
         group.add( large );
         group.add( medium );
         group.add( small );
-/*   
+
         // ====================================================================
         // Combo Boxes
         
@@ -103,7 +103,7 @@ public class ComponentDemo extends JFrame {
         mobs.addItem( "Slime" );
         mobs.addItem( "Enderman" );
         add( mobs );
-/*
+
         // ====================================================================
         // Text Areas
         
@@ -113,7 +113,7 @@ public class ComponentDemo extends JFrame {
         area.setText( "Badgers? Badgers!?! \n" +
                       "We don't need no \n" +
                       "stinking BADGERS!!!");
-*/
+
         // make the frame visible
         setVisible( true );
     }   

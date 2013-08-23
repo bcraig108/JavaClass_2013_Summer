@@ -41,12 +41,12 @@ public class SecretWord2
     /**
      * This method is used to give the user a hint about the secret word.
      */
-    public void hint()
+    public String hint()
     {
         char [] secretArray = secret.toCharArray();
 //        int     numLetters = secret.length();
         
-        System.out.println( "The first letter is " + secretArray[0] );
+        return "The first letter is " + secretArray[0];
 //        System.out.println( "There are " + numLetters + " letters." );
 //        System.out.println( "The last letter is " + secretArray[numLetters-1] );        
     }
@@ -82,7 +82,7 @@ public class SecretWord2
             else    // the secret word does not match
             {
                 System.out.println( "Sorry, try again!" );
-                secretWord.hint();
+                System.out.println( secretWord.hint() );
             
             }   // end if the secret word matches
             
