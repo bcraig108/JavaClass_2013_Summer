@@ -4,15 +4,9 @@ import java.awt.Graphics;
 
 public class RootApplet extends javax.swing.JApplet
 {
-    int number;
-    
-    public void init()
-    {
-        number = 225;
-    }
-    
     public void paint(Graphics screen)
     {
+        int number = 225;
         screen.drawString( "The square root of " + number + 
                            " is " + Math.sqrt(number), 
                            5, 
