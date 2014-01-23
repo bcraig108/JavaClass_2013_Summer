@@ -9,7 +9,7 @@ public class StringExamples {
         
         // println() without any arguments prints just a newline
         System.out.println();
-/*        
+        
         // print() does not add a newline - several print() calls in a row will
         // end up on the same line
         System.out.print( "Use " );
@@ -97,6 +97,6 @@ public class StringExamples {
         
         System.out.println( messengers );
         System.out.println( recording + " has the recording." );
- */              
+ /**/              
     }
 }
