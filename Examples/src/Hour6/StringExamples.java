@@ -9,7 +9,7 @@ public class StringExamples {
         
         // println() without any arguments prints just a newline
         System.out.println();
-        
+/*        
         // print() does not add a newline - several print() calls in a row will
         // end up on the same line
         System.out.print( "Use " );
@@ -83,5 +83,20 @@ public class StringExamples {
         
         System.out.println( "\"" + soloShip + "\" contains Falcon at " + 
                             falcon + " and Eagle at " + eagle );
+        System.out.println();
+        
+        // strings within strings
+        String jediMaster = "Obi Wan Kenobi";
+        String hermit = "Ben " + jediMaster.substring(8);
+        
+        System.out.println( hermit + " is really " + jediMaster );
+        System.out.println();
+        
+        String messengers = "C3PO and R2D2 have a message.";
+        String recording = messengers.substring(9,13);
+        
+        System.out.println( messengers );
+        System.out.println( recording + " has the recording." );
+ */              
     }
 }
