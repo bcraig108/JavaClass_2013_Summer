@@ -17,7 +17,7 @@ public class StringExamples {
         System.out.print( "Force, " );
         System.out.println( "Luke." ); 
         System.out.println();
-        
+ /*       
         // Use a backslash in the string to print special caracters such as
         // double quotes (\"), newlines (\n), single quotes (\') and tabs (\t)
         System.out.println( "George Lucas directed \"Star Wars\"." );
@@ -97,6 +97,6 @@ public class StringExamples {
         
         System.out.println( messengers );
         System.out.println( recording + " has the recording." );
- /**/              
+ */              
     }
 }
