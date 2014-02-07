@@ -120,7 +120,8 @@ public class Loops {
         }
         System.out.println();
         
-        // What do you think will happen here?
+        // What do you think will happen here? What will happen if you remove
+        // the break?
 
         // ====================================================================
         
@@ -158,12 +159,12 @@ public class Loops {
         }
         
         // ====================================================================
-        
+
         // "for" loops can have more that one index value - as in this example.
         // There are 2 indexes, i and j.  Both are initialized to 0.  Both are
         // used in the conditional.  Both are incremented each time through the
         // loop.
-        
+
         int i, j;
         
         for ( i = 0, j = 0; i * j < 1000; i++, j += 2 )
