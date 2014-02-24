@@ -22,7 +22,7 @@ public class Loops {
         {
             System.out.println( "I will not hit my brother." );
         }
-        
+    
         // What do you think this loop will do?  How many times will it be
         // repeated?  What if you change the "10" to a "5"?
         
@@ -33,7 +33,7 @@ public class Loops {
         
         for ( int index = 0; index < 10; index++ )
             System.out.println( "I will not pinch my sister." );
-        
+       
         // What do you think this loop will do?  How many times will it be
         // repeated?  What if you change the "10" to a "5"?
         
@@ -82,7 +82,7 @@ public class Loops {
         // What do you think will happen in this loop?  How many times will it
         // be repeated?  What happens if you remove "count++"? Why? What happens
         // if you start count at 5? Why?
-        
+    
         // ====================================================================
         
         // "do-while" loops are similar to "while" loops, but the condition is
@@ -98,7 +98,7 @@ public class Loops {
         while ( potato <= 3 );
         
         System.out.println( potato );
-        
+       
         // What do you think will happen in this loop?  How many times will it
         // be repeated?  What happens if you remove "potato++"? Why? What
         // happens if you start count at 3? 4? Why?
