@@ -57,6 +57,20 @@ public class ArraysExamples {
         // what do you expect this line to print?  What if you replaced the 0 
         // with a 1? what about 8?
         
+        // here is an array of the first 15 prime numbers
+        int primes[] = { 1,  2,  3,  5,  7, 
+                        11, 13, 17, 19, 23, 
+                        29, 31, 37, 41, 43 };
+        
+        // we perform normal math operations on any of the elements
+        int sum = primes[0] + primes[2] + primes[5];
+        int prod = primes[1] * primes[3] * primes[14];
+        
+        System.out.println( "sum = " + sum );
+        System.out.println( "prod = " + prod );
+
+        // what do you expect these lines to print?
+        
         // ====================================================================
         // arrays can tell us how big they are
         
@@ -92,6 +106,33 @@ public class ArraysExamples {
         // end the line
         System.out.println();
         
+        // ====================================================================
+        // multidimentional arrays
+        //
+        int multi[][] = { { 0, 0, 0, 0 }, 
+                          { 0, 1, 2, 3 }, 
+                          { 0, 2, 4, 6 }, 
+                          { 0, 3, 6, 9 } };
+        
+        int twoTimesTwo   = multi[2][2];
+        int twoTimesThree = multi[2][3];
+        
+        System.out.println( "2 x 2 = " + twoTimesTwo ); 
+        System.out.println( "2 x 3 = " + twoTimesThree ); 
+        
+        // try filling it in
+        
+        int [][] mult2 = new int[10][10];
+        
+        for ( int row = 0; row < 10; row++ ) {
+            for ( int col = 0; col < 10; col++ ) {
+                mult2[row][col] = row * col;
+            }
+        }
+        
+        System.out.println( "3 x 4 = " + mult2[3][4] ); 
+        System.out.println( "6 x 7 = " + mult2[6][7] ); 
+
         // ====================================================================
         // you can sort arrays
         
