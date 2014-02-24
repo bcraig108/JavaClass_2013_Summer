@@ -27,7 +27,7 @@ public class Conditionals {
             System.out.println( "Let\'s play Minecraft!" );
             System.out.println();
         }
-        
+       
         // Run this program: Does the line above print?  Why or why not?
         // Change the play variable to true and run it again: Does it print?
 
@@ -63,7 +63,7 @@ public class Conditionals {
 
         // Run this program: Does the line above print?  Why or why not?
         // What if you change life to 0? -10?
-        
+
         // =====================================================================
         
         // You can use the equal (==) operator inside an if statement
@@ -79,7 +79,7 @@ public class Conditionals {
         // Run this program: Does the line above print?  Why or why not?
         // What if you change creeperLife to 0?
         // =====================================================================
-        
+
         // You can use the not-equal (!=) operator inside an if statement
 
         int zombie = 15;
@@ -130,9 +130,13 @@ public class Conditionals {
         
         System.out.print( "I " );
         if ( tool >= block )
+        {
             System.out.print( "can" );
+        }        
         else
+        {
             System.out.print( "can\'t" );
+        }
         System.out.println( " mine that!" );
         System.out.println();                        
         
@@ -151,7 +155,7 @@ public class Conditionals {
         // What if you change the block to GOLD_BLOCK? What if you change tool
         // to WOODEN_PICKAXE?
         // =====================================================================
-        
+
         // You can test multiple conditions in order
 
         int block2 = IRON_BLOCK;
@@ -216,7 +220,5 @@ public class Conditionals {
         // Run this program: Which line of the above prints?  Why?
         // What if you change the block to GOLD_BLOCK? DIAMOND_BLOCK? -1?
         // =====================================================================
-        
-        
     }
 }
