@@ -17,7 +17,7 @@ public class StringExamples {
         System.out.print( "Force, " );
         System.out.println( "Luke." ); 
         System.out.println();
-        
+ /*       
         // Use a backslash in the string to print special caracters such as
         // double quotes (\"), newlines (\n), single quotes (\') and tabs (\t)
         System.out.println( "George Lucas directed \"Star Wars\"." );
@@ -83,5 +83,20 @@ public class StringExamples {
         
         System.out.println( "\"" + soloShip + "\" contains Falcon at " + 
                             falcon + " and Eagle at " + eagle );
+        System.out.println();
+        
+        // strings within strings
+        String jediMaster = "Obi Wan Kenobi";
+        String hermit = "Ben " + jediMaster.substring(8);
+        
+        System.out.println( hermit + " is really " + jediMaster );
+        System.out.println();
+        
+        String messengers = "C3PO and R2D2 have a message.";
+        String recording = messengers.substring(9,13);
+        
+        System.out.println( messengers );
+        System.out.println( recording + " has the recording." );
+ */              
     }
 }
