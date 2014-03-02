@@ -44,7 +44,7 @@ public class ArraysExamples {
         // same time
         
         String[] reindeerName = { "Dasher", "Dancer", "Prancer", "Vixen", 
-                                  "Comet",  "Cupid",  "Donner",  "Blitzen" };
+                                  "Comet",  "Cupid",  "Donner",  "Blitzen", "Rudolph" };
         
         // the size of the array is fixed once it is created - we cannot make it
         // bigger or smaller
@@ -52,8 +52,7 @@ public class ArraysExamples {
         // we can use the elements in an array just like a variable, except we
         // need to "index" to the correct "element"
         
-        System.out.println( reindeerName[0] );
-        
+        System.out.println( reindeerName[7] );
         // what do you expect this line to print?  What if you replaced the 0 
         // with a 1? what about 8?
         
@@ -79,7 +78,7 @@ public class ArraysExamples {
         // what do you expect this line to print?  What if you changed
         // reindeerName to include "Rudolph"?
         
-        // ====================================================================
+     // ====================================================================
         // you can change a string to the array of chars
         
         String mostFamous = "Rudolph the Red Nose Reindeer";
@@ -119,7 +118,7 @@ public class ArraysExamples {
         
         System.out.println( "2 x 2 = " + twoTimesTwo ); 
         System.out.println( "2 x 3 = " + twoTimesThree ); 
-        
+
         // try filling it in
         
         int [][] mult2 = new int[10][10];
@@ -129,9 +128,10 @@ public class ArraysExamples {
                 mult2[row][col] = row * col;
             }
         }
-        
+
         System.out.println( "3 x 4 = " + mult2[3][4] ); 
         System.out.println( "6 x 7 = " + mult2[6][7] ); 
+  
 
         // ====================================================================
         // you can sort arrays
@@ -144,7 +144,7 @@ public class ArraysExamples {
         {
             System.out.println( reindeerName[index] );
         }
-        
+
         // sort the array 
         Arrays.sort( reindeerName );
         
@@ -156,6 +156,5 @@ public class ArraysExamples {
         {
             System.out.println( reindeerName[index] );
         }
-
     }
 }
