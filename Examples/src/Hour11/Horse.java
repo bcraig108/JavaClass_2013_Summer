@@ -10,7 +10,7 @@ public class Horse {
      * The horse has a name.
      * - This is an attribute 
      * - public means that other classes can read and change this variable
-     * - Every horse object has its own theName
+     * - Every horse object has its own name
      */
     public String name;
     
@@ -22,6 +22,14 @@ public class Horse {
      * - Every horse object has its own runCount
      */
     protected int runCount;
+    
+    /**
+     * The horse remembers how may strides it has run.
+     * - This is an attribute
+     * - private means that only this class can read and change this variable
+     * - Every horse object has its own strideCount
+     */
+    private int strideCount;
     
     /**
      * The horse remembers how many times it jumped.
@@ -54,7 +62,8 @@ public class Horse {
         this.runCount = 0;  // "this" refers to the object being created. 
                             // It is not needed here, but can be used if you want
         
-        jumpCount = 0;      // No "this" here.  It is not needed
+        strideCount = 0;    // No "this" here.  It is not needed
+        jumpCount = 0;
         
         horseCount++;       // Cannot have "this" here.  This is a static
                             // variable.  It does not belong to "this" horse.
@@ -67,11 +76,29 @@ public class Horse {
      * This method makes the horse run.
      * - this is a behavior
      * - public means that other classes can call run()
+     * 
+     * @param stride the number of strides to run
+     * @return the number of times the horse has run
      */
-    public void run()
+    public int run( int strides )
     {
-        System.out.println( "Run, " + name + ", Run!" );
+        System.out.println( name + " ran " + strides + " strides." );
         runCount++;
+        strideCount += strides;
+        
+        return runCount;
+    }
+    
+    /**
+     * This method makes the horse run a random number of strides.
+     * - this is a behavior
+     * - public means that other classes can call run()
+     * 
+     * @return the number of times the horse has run
+     */
+    public int run()
+    {
+        return run( (int)( 200.0 * Math.random() ) );
     }
     
     /**
@@ -106,6 +133,15 @@ public class Horse {
     {
         return horseCount;
     }
+
+    /**
+     * strideCount accessors
+     */
+    final public int getStrideCount() { return strideCount; };
+
+    public void setStrideCount( int count ) { strideCount = count; };
+    
+    public void addStrides( int count ) { strideCount += count; };
     
     /**
      * Main is ALWAYS where the program starts
@@ -123,7 +159,7 @@ public class Horse {
         Horse horse1 = new Horse( "Rusty" );
         
         // rusty can run
-        horse1.run();
+        horse1.run( 100 );
         
         // rusty can jump
         horse1.jump();
@@ -138,21 +174,20 @@ public class Horse {
         Horse horse2 = new Horse( "Smokey" );
         
         // Smokey can also run and jump
-        horse2.run();
+        horse2.run( 100 );
         horse2.jump();
         
         // He will run again
-        horse2.run();
+        horse2.run( 150 );
         
         // How many horses are there now?
-        count = Horse.howMany();
-        System.out.println( "There are " + count + " horses." );
+        System.out.println( "There are " + Horse.howMany() + " horses." );
 
         //======================================================================
         // Rusty and Smokey will race each other
         //
-        horse1.run();
-        horse2.run();
+        horse1.run( 300 );
+        horse2.run( 300 );
         
         //======================================================================
         // Let's see how many times they have run and jumped
