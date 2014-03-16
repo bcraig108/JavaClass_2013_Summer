@@ -75,7 +75,7 @@ public class Horse {
         
         // rusty can jump
         horse1.jump();
-        
+
         //======================================================================
         // let's create a horse called Smokey
         //
@@ -86,7 +86,7 @@ public class Horse {
         horse2.jump();
         
         // He will run again
-        horse2.run();
+        horse2.run();     
         
         //======================================================================
         // Rusty and Smokey will race each other
