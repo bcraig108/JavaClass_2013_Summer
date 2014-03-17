@@ -19,13 +19,14 @@ public class HappyApplet extends JApplet {
      */
     @Override
     public void init() {
-        // make the background black
-        setBackground( Color.black );
+        this.setSize(200, 200);
     }   
     
     @Override
     public void paint( Graphics g ) {
         // draw something happy
+        g.setColor(Color.black);
+        g.fillRect(0, 0, 200, 200);
         g.setColor(Color.yellow);
         g.fillOval(50, 50, 100, 100);
         g.setColor(Color.black);

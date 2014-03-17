@@ -4,6 +4,7 @@
  */
 package Hour12;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -12,8 +13,11 @@ import java.awt.Graphics;
  */
 public class HatApplet extends HappyApplet {
     
-    @override
+    @Override
     public void paint( Graphics g ) {
-        
+        super.paint(g);
+        g.setColor(Color.red);
+        g.fillRect(75, 10, 50, 50);
+        g.fillRect(50, 55, 100, 5);
     }
 }
