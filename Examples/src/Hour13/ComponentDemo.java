@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 
 /**
  *
@@ -27,9 +28,6 @@ public class ComponentDemo extends JFrame {
         
         // set the title on the title bar
         super( "Component Demo");   
-        
-        // set the size of the window (x,y)
-        setSize( 250, 400 );
         
          // tell the program to exit when the x is clicked
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
@@ -114,6 +112,9 @@ public class ComponentDemo extends JFrame {
                       "We don't need no \n" +
                       "stinking BADGERS!!!");
 
+        // set the size based on the contents
+        pack();
+        
         // make the frame visible
         setVisible( true );
     }   
