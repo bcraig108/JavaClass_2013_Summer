@@ -43,7 +43,7 @@ public class Hero {
         for ( String power : powers ) {
             System.out.println( power ); 
         }
-        
+    
         Collections.sort( powers );
         
         System.out.println( "Alphabetical: " );

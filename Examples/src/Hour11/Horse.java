@@ -72,6 +72,18 @@ public class Horse {
         System.out.println( "Happy Birthday, " + this.name );
     }
 
+    public Horse( Horse horse )
+    {
+        this.name = horse.name;
+        this.runCount = horse.runCount;
+        this.strideCount = horse.strideCount;
+        this.jumpCount = horse.jumpCount;
+        
+        horseCount++; 
+        
+        System.out.println( "Happy Birthday, " + this.name );
+    }
+
     /**
      * This method makes the horse run.
      * - this is a behavior

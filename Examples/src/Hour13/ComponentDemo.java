@@ -11,9 +11,9 @@ import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.UIManager;
 
 /**
  *
@@ -36,51 +36,65 @@ public class ComponentDemo extends JFrame {
         FlowLayout flo = new FlowLayout();
         setLayout( flo );
         
+        setSize( 250, 350 );
+        
         // ====================================================================
         // Buttons
         
+        JPanel buttonPanel = new JPanel();
+                
         // create and add a play button
         JButton play = new JButton( "Play" );
-        add( play );
+        buttonPanel.add( play );
 
         // create and add a stop button
         JButton stop = new JButton( "Stop" );
-        add( stop );
+        buttonPanel.add( stop );
         
         // create and add a pause button
         JButton pause = new JButton( "Pause" );
-        add( pause );
+        buttonPanel.add( pause );
+        
+        add( buttonPanel );
         
         // ====================================================================
         // Labels
         
+        JPanel textPanel = new JPanel();
+        
         // create and add a label
         JLabel label = new JLabel( "Name:" );
-        add( label );
+        textPanel.add( label );
 
         // ====================================================================
         // Text Fields
         
         // create and add a text field
         JTextField field = new JTextField( 15 );
-        add( field );
+        textPanel.add( field );
         field.setText( "Brian" );
 
+        add( textPanel );
+        
         // ====================================================================
         // Check Boxes
 
+        JPanel checkPanel = new JPanel();
+        
         // create and add "Large" checkbox
         JCheckBox large = new JCheckBox( "Large" );
-        add( large );
+        checkPanel.add( large );
        
         // create and add "Medium" checkbox
         JCheckBox medium = new JCheckBox( "Medium", true );
-        add( medium );
+        checkPanel.add( medium );
        
         // create and add "Small" checkbox
         JCheckBox small = new JCheckBox( "Small" );
-        add( small );
+        checkPanel.add( small );
        
+        add( checkPanel );
+        
         // ====================================================================
         // Button Groups
 
@@ -112,8 +126,8 @@ public class ComponentDemo extends JFrame {
                       "We don't need no \n" +
                       "stinking BADGERS!!!");
 
-        // set the size based on the contents
-        pack();
+        ClockPanel clock = new ClockPanel();
+        add( clock );
         
         // make the frame visible
         setVisible( true );
