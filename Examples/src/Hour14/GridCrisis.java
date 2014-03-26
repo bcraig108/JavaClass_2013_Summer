@@ -17,14 +17,14 @@ public class GridCrisis extends JFrame {
         setSize( 348, 128 );
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         
-        GridLayout grid = new GridLayout( 2, 3 );
-        setLayout( grid );
-        
         panicButton = new JButton( "Panic" );
         dontPanicButton = new JButton( "Don't Panic" );
         blameButton = new JButton( "Blame Others" );
         mediaButton = new JButton( "Notify the Media" );
         saveButton = new JButton( "Save Yourself" );
+        
+        GridLayout grid = new GridLayout( 2, 3 );
+        setLayout( grid );
         
         add( panicButton );
         add( dontPanicButton );
@@ -33,8 +33,6 @@ public class GridCrisis extends JFrame {
         add( saveButton );
         
         setVisible(true);
-        
-                
     }
     
     public static void main(String[] args) {

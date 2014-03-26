@@ -1,10 +1,12 @@
 package Hour14;
 
-import java.awt.BorderLayout;
+import java.awt.Insets;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-public class BorderCrisis extends JFrame {
+public class InsetsCrisis extends JFrame {
 
     JButton panicButton;
     JButton dontPanicButton;
@@ -12,9 +14,8 @@ public class BorderCrisis extends JFrame {
     JButton mediaButton;
     JButton saveButton;
     
-    public BorderCrisis() {
+    public InsetsCrisis() {
         super( "Crisis" );
-        setSize( 348, 128 );
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         
         panicButton = new JButton( "Panic" );
@@ -23,19 +24,28 @@ public class BorderCrisis extends JFrame {
         mediaButton = new JButton( "Notify the Media" );
         saveButton = new JButton( "Save Yourself" );
         
-        BorderLayout border = new BorderLayout();
-        setLayout( border );
+        JPanel pane = new JPanel();
+        BoxLayout box = new BoxLayout( pane, BoxLayout.X_AXIS );
+        pane.setLayout( box );
         
-        add( panicButton, BorderLayout.NORTH );
-        add( dontPanicButton, BorderLayout.SOUTH );
-        add( blameButton, BorderLayout.EAST );
-        add( mediaButton, BorderLayout.WEST );
-        add( saveButton, BorderLayout.CENTER );
+        pane.add( panicButton );
+        pane.add( dontPanicButton );
+        pane.add( blameButton );
+        pane.add( mediaButton );
+        pane.add( saveButton );
+        
+        add( pane );
+
+        pack();
         
         setVisible(true);                
     }
     
+    public Insets getInsets() {
+        return new Insets( 50, 20, 30, 10 );
+    }
+    
     public static void main(String[] args) {
-        BorderCrisis crisis = new BorderCrisis();
+        InsetsCrisis crisis = new InsetsCrisis();
     }
 }

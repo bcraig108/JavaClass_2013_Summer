@@ -17,14 +17,14 @@ public class Crisis extends JFrame {
         setSize( 348, 128 );
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         
-        FlowLayout flow = new FlowLayout();
-        setLayout( flow );
-        
         panicButton = new JButton( "Panic" );
         dontPanicButton = new JButton( "Don't Panic" );
         blameButton = new JButton( "Blame Others" );
         mediaButton = new JButton( "Notify the Media" );
         saveButton = new JButton( "Save Yourself" );
+        
+        FlowLayout flow = new FlowLayout();
+        setLayout( flow );
         
         add( panicButton );
         add( dontPanicButton );
@@ -32,9 +32,7 @@ public class Crisis extends JFrame {
         add( mediaButton );
         add( saveButton );
         
-        setVisible(true);
-        
-                
+        setVisible(true);                
     }
     
     public static void main(String[] args) {
