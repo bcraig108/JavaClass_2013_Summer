@@ -17,7 +17,7 @@ public class Tool extends JFrame {
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         
         ImageIcon newIcon  = new ImageIcon( "images/newfile.gif" );
-        JButton newButton  = new JButton( newIcon );
+        JButton newButton  = new JButton( "New", newIcon );
         newButton.setToolTipText( "New..." );
         
         ImageIcon openIcon = new ImageIcon( "images/openfile.gif" );
