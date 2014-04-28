@@ -42,10 +42,10 @@ public class ColorSliders extends JFrame implements ChangeListener {
         
         JSlider source = (JSlider)ce.getSource();
         
-        if ( source.getValueIsAdjusting() == false ) {
+        //if ( source.getValueIsAdjusting() == false ) {
             canvas.changeColor( mixColor() );
             canvas.repaint();
-        }
+        //}
     }
 
     Color mixColor() {
