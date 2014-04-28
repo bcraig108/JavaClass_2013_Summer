@@ -49,7 +49,7 @@ public class MailWriter extends JFrame {
         
         JScrollPane scroll = new JScrollPane( 
                 messageArea,
-                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
+                JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, 
                 JScrollPane.HORIZONTAL_SCROLLBAR_NEVER );
         row3.add(scroll);
         add( row3 );
