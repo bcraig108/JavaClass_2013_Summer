@@ -28,13 +28,6 @@ public class ConfigWriter {
         }
     }
 
-    private void write( FileOutputStream stream, String output ) 
-            throws IOException {
-        output += newline;
-        byte[] data = output.getBytes();
-        stream.write( data );
-    }
-    
     public static void main(String[] args) {
         ConfigWriter cf = new ConfigWriter();
     }

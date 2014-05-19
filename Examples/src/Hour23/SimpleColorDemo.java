@@ -10,9 +10,9 @@ import javax.swing.JFrame;
 public class SimpleColorDemo extends JFrame {
 
     public SimpleColorDemo() {
-        super("Font Demo");
+        super("Simple Color Demo");
 
-        setSize(640, 480);
+        setSize(420, 240);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         setVisible(true);
@@ -20,19 +20,17 @@ public class SimpleColorDemo extends JFrame {
 
     @Override
     public void paint(Graphics g) {
-
         super.paint(g);
 
         Graphics2D g2 = (Graphics2D) g;
 
         g2.setFont(new Font("Wide Latin", Font.PLAIN, 30));
-
-        g2.setColor(Color.orange);
-
         g2.setRenderingHint(
                 RenderingHints.KEY_ANTIALIASING, 
                 RenderingHints.VALUE_ANTIALIAS_ON);
-
+        g2.setColor(Color.blue);
+        g2.fillRect( 10, 120, 400, 40 );
+        g2.setColor(Color.orange);
         g2.drawString("Go ORANGE!", 20, 150);
     }
 

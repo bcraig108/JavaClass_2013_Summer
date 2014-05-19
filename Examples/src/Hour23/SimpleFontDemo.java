@@ -23,7 +23,9 @@ public class SimpleFontDemo extends JFrame {
 
         Graphics2D g2 = (Graphics2D) g;
 
-        g2.setFont(new Font("Impact", Font.PLAIN, 30));
+        Font font = new Font("Serif", Font.PLAIN, 30);
+        
+        g2.setFont( font );
 
         g2.setRenderingHint(
                 RenderingHints.KEY_ANTIALIASING,

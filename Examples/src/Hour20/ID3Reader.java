@@ -23,6 +23,7 @@ public class ID3Reader {
                 System.out.println( "Artist: " + id3.substring( 33, 62 ) );
                 System.out.println( "Album : " + id3.substring( 63, 92 ) );                
                 System.out.println( "Year  : " + id3.substring( 93, 97 ) );                
+                System.out.println( "Other : " + id3.substring( 98, 127 ) );                
             } else {
                 System.out.println( "No ID3 data" ); 
             }
